@@ -1,6 +1,13 @@
 .header{
-    &_title{
-        color: $color-primary;
-        font-size: 3.6rem;
+     padding: 4rem 0;
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
     }
+    .logo{
+        width: 15rem;
+    }
+
 }

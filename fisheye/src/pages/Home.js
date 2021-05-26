@@ -1,10 +1,11 @@
 import Header from "../components/Header";
+import Photographers from "../components/Photographers";
 
 function Home() {
     return (
       <div >
-        <h1>index</h1>
         <Header />
+        <Photographers />
       </div>
     );
   }

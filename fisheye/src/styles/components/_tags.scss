@@ -1,0 +1,21 @@
+.list-tags{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    order: 99;
+
+    .tag-item{
+        margin: 0.6rem 0.5rem;
+
+        .tag-btn{
+            color: $color-primary;
+            border: 0.5px solid $color-grey01;
+            background-color: $color-white;
+            border-radius: 11px;
+            padding: 0.3rem 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    }
+}

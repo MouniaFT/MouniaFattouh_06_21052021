@@ -6,9 +6,10 @@ const Header = () => {
     
       return (
         <header className="header" role="banner">
-            <Logo />
-            <Navigation />
-            <h1 className="header_title">Nos photographes</h1>
+          <div className="container">
+              <Logo />
+              <Navigation />
+          </div>  
         </header>
       );
     

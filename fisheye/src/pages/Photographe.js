@@ -1,7 +1,7 @@
 function Photographe() {
     return (
       <div >
-        <h1>Photographe</h1>
+        <h1>Page 2</h1>
       </div>
     );
   }

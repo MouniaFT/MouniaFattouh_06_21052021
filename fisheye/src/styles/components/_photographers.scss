@@ -1,0 +1,11 @@
+.photographers{
+    
+    &_title{
+        color: $color-primary;
+        font-size: 2rem;
+        white-space: nowrap;
+        position: absolute;
+        top: 4.5rem;
+        right: 2rem;
+    }
+}

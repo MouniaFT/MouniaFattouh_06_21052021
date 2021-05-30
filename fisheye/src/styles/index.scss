@@ -1,5 +1,6 @@
 @import "./reset";
-@import "./variables";
+@import "./utils/variables";
+@import "./utils/mixins";
 @import "./global";
 @import "./components/tags";
 @import "./components/navigation";

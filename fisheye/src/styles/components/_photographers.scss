@@ -1,11 +1,29 @@
 .photographers{
-    
-    &_title{
+
+    &_title {
         color: $color-primary;
-        font-size: 2rem;
+        font-size: 1.4rem;
         white-space: nowrap;
         position: absolute;
         top: 4.5rem;
         right: 2rem;
     }
+    
+    @include desktops {
+        &_title {
+            font-size: 2rem;
+        }
+
+        &_list {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 4rem;
+            
+            .card-photographe {
+                width: calc(100% / 3);
+            }
+        }
+    }
 }
+
+

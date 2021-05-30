@@ -3,10 +3,10 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    order: 99;
+    
 
     .tag-item{
-        margin: 0.6rem 0.5rem;
+        margin: 0 0.3rem 0.5rem;
 
         .tag-btn{
             color: $color-primary;

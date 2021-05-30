@@ -1,29 +1,32 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-import Cardphotographe from "../components/Cardphotographe"
+import Cardphotographe from "../components/Cardphotographe";
+
 
 const Photographers = () => {
-  const[data, setData] = useState([]);
-
+  const[dataPhotographers, setDataPhotographers] = useState([]);
+    
   useEffect(() => {
-    axios
-      .get('./json/FishEyeData.json')
-      .then((res) => setData(res.data.photographers));
-  
+      axios
+      .get('https://raw.githubusercontent.com/MouniaFT/MouniaFattouh_06_21052021/main/fisheye/public/json/FishEyeData.json')
+      .then((res) => setDataPhotographers(res.data.photographers));
+
   }, []);
+  
   return(
-    <main className="photographers">
+      <main id="maincontent" className="photographers">
       <div className="container">
         <h1 className="photographers_title">Nos photographes</h1>
         <ul className="photographers_list">
           {
-            data.map((photographe) => (
+            
+            dataPhotographers.map((photographe) => (
               <Cardphotographe photographe={photographe} key={photographe.id}/>
+
             ))
           }
         </ul>
-      </div>
-      
+      </div> 
     </main>
   ) 
 }

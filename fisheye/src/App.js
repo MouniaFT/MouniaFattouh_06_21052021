@@ -1,12 +1,11 @@
-import Home from "./pages/Home";
-import Photographe from "./pages/Photographe";
+import Pages from "./pages/index";
+
 
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <Photographe />
+      <Pages />
     </div>
   );
 }

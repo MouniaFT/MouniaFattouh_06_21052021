@@ -27,16 +27,26 @@ const Photographe = () =>{
 
   return (
     <div>
-      <header>
-        <Logo />
+      <header className="header">
+        <div className="container">
+          <Logo />
+        </div>
       </header>
-      {dataPhotographers.photographers
-          .filter((photographe) => photographe.id == id)
-          .map((photographe) => (
-              <PhotographeInfos key={photographe.id} photographe={photographe} />
-          ))
-      }
-      <PhotographeMedia id={id} media={dataPhotographers.media} />
+      <main className="photographers">
+        <div className="container">
+          <section className="photographers_infos">
+            {dataPhotographers.photographers
+                .filter((photographe) => photographe.id == id )
+                .map((photographe) => (
+                  <PhotographeInfos key={photographe.id} photographe={photographe} />
+                ))
+            }
+          </section>
+          <section className="photographers_media">
+            <PhotographeMedia id={id}  media={dataPhotographers.media} photographers={dataPhotographers.photographers} />
+          </section>
+        </div>
+      </main>
     </div>
   );
 }

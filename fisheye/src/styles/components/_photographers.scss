@@ -5,13 +5,15 @@
         font-size: 1.4rem;
         white-space: nowrap;
         position: absolute;
-        top: 4.5rem;
+        top: 4.9rem;
         right: 2rem;
     }
     
     @include desktops {
         &_title {
-            font-size: 2rem;
+            font-size: 3.6rem;
+            top: 4.5rem;
+            right: 5rem;
         }
 
         &_list {

@@ -35,7 +35,7 @@ const Cardphotographe = (props) => {
         <li className="card-photographe">
             <Link to={`/photographe/${photographe.id}`} className="card-photographe-header">
                 <img src={`../images/Photographers/${photographe.portrait}`} alt=""/>
-                <h2>{photographe.name}</h2>
+                <h2 className="name">{photographe.name}</h2>
             </Link>
             <div className="card-photographe-body">
                 <p className="location">{photographe.city}, {photographe.country}</p>

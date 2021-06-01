@@ -1,0 +1,90 @@
+.photographers_infos {
+    padding-bottom: 3rem;
+
+    .card-photographe {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        justify-content: space-between;
+
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+            order: 2;
+        }
+
+        .card-photographe-body {
+            margin-right: 1rem;
+            order: 1;
+            .tagline {
+                color: $color-grey02;
+            }
+
+            .list-tags {
+                justify-content: start;
+
+                .tag-item{
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .contact-btn {
+            color: $color-white;
+            padding: 0.7rem 1.9rem;
+            background-color: $color-primary;
+            border: none;
+            font-weight: bold;
+            font-size: 1.8rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            position: fixed;
+            bottom: 4rem;
+            right: 50%;
+            transform: translateX(50%);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .contact-btn:hover, .contact-btn:focus {
+            color: $color-black;
+            background-color: $color-secondary;
+        }
+
+    }
+
+    @include desktops {
+        background-color: $color-grey03;
+        border-radius: 0.5rem;
+        padding: 5rem;
+
+        .card-photographe {
+            
+            img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .contact-btn {
+                padding: 2.2rem 1.1rem;
+                font-size: 2rem;
+                position: absolute;
+                top: 218px;
+                left: 500px;
+                bottom: auto;
+                transform: translateX(-50%);
+                
+            }
+
+            
+
+        }
+
+        
+    }
+
+}

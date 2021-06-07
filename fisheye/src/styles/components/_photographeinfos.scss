@@ -33,27 +33,17 @@
             }
         }
 
-        .contact-btn {
-            color: $color-white;
-            padding: 0.7rem 1.9rem;
-            background-color: $color-primary;
-            border: none;
-            font-weight: bold;
-            font-size: 1.8rem;
-            border-radius: 0.5rem;
-            text-align: center;
+        .btn-contact {
             position: fixed;
             bottom: 4rem;
             right: 50%;
             transform: translateX(50%);
-            cursor: pointer;
-            transition: all 0.3s;
         }
 
-        .contact-btn:hover, .contact-btn:focus {
-            color: $color-black;
-            background-color: $color-secondary;
-        }
+        // .contact-btn:hover, .contact-btn:focus {
+        //     color: $color-black;
+        //     background-color: $color-secondary;
+        // }
 
     }
 
@@ -69,9 +59,7 @@
                 height: 200px;
             }
 
-            .contact-btn {
-                padding: 2.2rem 1.1rem;
-                font-size: 2rem;
+            .btn-contact {
                 position: absolute;
                 top: 218px;
                 left: 500px;
@@ -87,4 +75,8 @@
         
     }
 
+}
+
+.ReactModal__Overlay{
+    overflow: auto;
 }

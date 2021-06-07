@@ -4,6 +4,7 @@ export const FilterContext = createContext({});
 
 const FilterContextProvider = ({children}) => {
 const [filterList, setFilterList] = useState([]);
+
     return (
         <FilterContext.Provider value={{filterList, setFilterList}}>
             {children}

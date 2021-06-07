@@ -24,6 +24,29 @@ a {
     display: inline-block;
 }
 
+.btn {
+    color: $color-white;
+    padding: 0.7rem 1.9rem;
+    background-color: $color-primary;
+    border: none;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover, &:focus{
+        color: $color-black;
+        background-color: $color-orange;
+    }
+
+    @include desktops {
+        padding: 2.2rem 1.1rem;
+        font-size: 2rem;
+    }
+}
+
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);

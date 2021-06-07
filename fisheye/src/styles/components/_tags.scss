@@ -16,6 +16,12 @@
             padding: 0.3rem 1.1rem;
             font-weight: 500;
             cursor: pointer;
+            transition: all 0.3s;
+
+            &.active, &:hover, &:focus {
+                background-color: $color-primary;
+                color: $color-white;
+            }
         }
     }
 }

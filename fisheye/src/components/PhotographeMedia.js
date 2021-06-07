@@ -1,11 +1,12 @@
 const PhotographeMedia = (props) => {
-    console.log("media",props.name);
+    
     return (
-      <ul className="photographers_media_list">
+      <div>
+        
+        <ul className="photographers_media_list">
         {props.media
             .filter((media) => media.photographerId === parseInt(props.id))
             .map((media) => (
-                //<li>{media.title}</li>
                 <li className="media">
                   {props.photographers
                     .filter((photographe) => photographe.id === parseInt(props.id) )
@@ -25,6 +26,9 @@ const PhotographeMedia = (props) => {
             ))
         }
       </ul>
+
+      </div>
+      
     );
 }
 export default PhotographeMedia;

@@ -1,9 +1,10 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
-import Logo from "../components/Logo"
-import PhotographeInfos from "../components/PhotographeInfos"
-import PhotographeMedia from "../components/PhotographeMedia"
+import Logo from "../components/Logo";
+import PhotographeInfos from "../components/PhotographeInfos";
+import PhotographeMedia from "../components/PhotographeMedia";
+
 
 const Photographe = () =>{
   const {id} = useParams();

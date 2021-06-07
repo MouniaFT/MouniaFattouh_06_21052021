@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 
 const Cardphotographe = (props) => {
     const {photographe} = props;
-    const {filterList, setFilterList} = useContext(FilterContext)
-
+    const {
+        filterList, 
+        setFilterList,
+    } = useContext(FilterContext)
 
     const clickBtn = (e) => {
         var value = e.target.value;
@@ -15,21 +17,17 @@ const Cardphotographe = (props) => {
         // ex: ["portrait", "travel"] 
          if (!filterList.includes(value)) {
              setFilterList([...filterList, value])
+             console.log(filterList);
+             e.target.classList.add('active')
          } else {
              setFilterList(filterList.filter((filter) => filter !== value ))
+             console.log(filterList);
+             e.target.classList.remove('active')
          }
         // Retirer le filtre si la valeur est presente dans la liste
     };
 
-    console.log(filterList);
-    // const {langs} = this.props;
-    // const {selectedLanguages} = this.state;
-
-    // // filter only if anything's selected else show all
-    // const languages = selectedLanguages.length === 0 
-    //     ? langs 
-    //     : langs.filter(lang => selectedLanguages.includes(lang));
-  
+    // console.log(filterList);
     
     return(
         <li className="card-photographe">
@@ -44,13 +42,9 @@ const Cardphotographe = (props) => {
                 <ul className="list-tags"> 
                     {
                         photographe.tags
-                        .map((tags) => (
-                            <li className="tag-item"><button className="tag-btn"  onClick={clickBtn} value={tags}>#{tags}</button></li>
+                        .map((tag) => (
+                            <li className="tag-item"><button className={'tag-btn ' + (filterList.includes(tag) ? 'active' : ' ')}  onClick={clickBtn} value={tag}>#{tag}</button></li>
                         ))
-
-                        // .filter((tag.includes) => {
-                        //     return tags.includes(setValueBtn);
-                        // })
 
                     }
                 </ul>

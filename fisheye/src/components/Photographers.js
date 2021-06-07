@@ -1,10 +1,16 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext} from 'react';
 import axios from 'axios';
 import Cardphotographe from "../components/Cardphotographe";
+import { FilterContext } from '../contexts/filterContext';
+
 
 
 const Photographers = () => {
   const[dataPhotographers, setDataPhotographers] = useState([]);
+  const {
+    filterList, 
+  } = useContext(FilterContext)
+
     
   useEffect(() => {
       axios
@@ -20,7 +26,17 @@ const Photographers = () => {
         <ul className="photographers_list">
           {
             
-            dataPhotographers.map((photographe) => (
+            dataPhotographers
+            .filter((photographe) => {
+              if (filterList.length <= 0) {
+                return true
+              }
+              if (photographe.tags.some(tag=> filterList.includes(tag))) {
+                return true
+              }
+              return false
+            })
+            .map((photographe) => (
               <Cardphotographe photographe={photographe} key={photographe.id}/>
 
             ))

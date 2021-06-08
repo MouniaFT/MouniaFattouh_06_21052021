@@ -1,5 +1,12 @@
+import { useState } from "react";
+
 const PhotographeMedia = (props) => {
-    
+      const [count, setCount] = useState(0);
+      //Incrementer les likes 
+      const increment = () => {
+          setCount(count + 1);
+      }
+
     return (
       <div>
         
@@ -19,8 +26,8 @@ const PhotographeMedia = (props) => {
                   }
                   <div className="media-body">
                     <div className="title">{media.title}</div>
-                    <span className="number">{media.likes}</span>
-                    <img className="likes" src="../images/likes.svg" alt="likes"/>
+                    <span className="number">{media.likes + count}</span>
+                    <img className="likes" onClick={increment} src="../images/likes.svg" alt="likes"/>
                   </div>
                 </li>
             ))

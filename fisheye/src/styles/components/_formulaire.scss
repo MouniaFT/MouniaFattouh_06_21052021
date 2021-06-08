@@ -49,7 +49,6 @@
             margin: 1.2rem auto;
         }
 
-
     }
 
     @include desktops {
@@ -69,4 +68,9 @@
             padding: 2rem 5rem;
         }
     }
+}
+
+.error-message{
+    color: $color-primary;
+    margin-top: 0.5rem;
 }

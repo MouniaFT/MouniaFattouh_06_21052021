@@ -1,0 +1,57 @@
+.media_filtre {
+    display: none;
+    @include desktops {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 2rem 0 2.5rem;
+    
+        &_label {
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+
+        &_menu {
+            position: relative;
+            margin-left: 2rem;
+            min-height: 5.5rem; // hauteur bouton
+
+            .media_filtre_btn {
+                border-radius: 0.5rem;
+           
+            }
+            
+            .media_filtre_list {
+                padding: 0 1rem;
+                background-color: $color-primary;
+                border-radius: 0.5rem;
+                position: absolute;
+                li {
+                    button {
+                        border-bottom: 1px solid $color-white;
+                        padding-left: 1rem;
+                        min-width: 15rem;
+                    }
+                    
+                    &:last-child button {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+
+        button {
+            background-color: $color-primary;
+            color: $color-white;
+            border: none;
+            padding: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            min-width: 17rem;
+            text-align: left;
+
+        }
+
+    }
+    
+}

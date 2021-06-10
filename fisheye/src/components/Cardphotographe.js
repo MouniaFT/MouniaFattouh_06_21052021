@@ -10,25 +10,22 @@ const Cardphotographe = (props) => {
         setFilterList,
     } = useContext(FilterContext)
 
+    // filtrer les photographes par tag au click sur le tag
     const clickBtn = (e) => {
         var value = e.target.value;
-        console.log(value, e)
+
         // Ajouter le filtre si la valeur n'est pas presente dans la liste
         // ex: ["portrait", "travel"] 
          if (!filterList.includes(value)) {
              setFilterList([...filterList, value])
-             console.log(filterList);
              e.target.classList.add('active')
+        // Retirer le filtre si la valeur est presente dans la liste
          } else {
              setFilterList(filterList.filter((filter) => filter !== value ))
-             console.log(filterList);
              e.target.classList.remove('active')
          }
-        // Retirer le filtre si la valeur est presente dans la liste
     };
 
-    // console.log(filterList);
-    
     return(
         <li className="card-photographe">
             <Link to={`/photographe/${photographe.id}`} className="card-photographe-header">
@@ -43,9 +40,10 @@ const Cardphotographe = (props) => {
                     {
                         photographe.tags
                         .map((tag) => (
-                            <li className="tag-item"><button className={'tag-btn ' + (filterList.includes(tag) ? 'active' : ' ')}  onClick={clickBtn} value={tag}>#{tag}</button></li>
+                            <li className="tag-item">
+                                <button className={'tag-btn ' + (filterList.includes(tag) ? 'active' : ' ')}  onClick={clickBtn} value={tag}>#{tag}</button>
+                            </li>
                         ))
-
                     }
                 </ul>
             </div>

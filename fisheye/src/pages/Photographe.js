@@ -10,7 +10,8 @@ const Photographe = () =>{
   const {id} = useParams();
   const [isLoading, setLoading] = useState(true);
   const [dataPhotographers, setDataPhotographers] = useState([]);
-    
+
+  // Récupérer la data
   useEffect(() => {
       axios
       .get('https://raw.githubusercontent.com/MouniaFT/MouniaFattouh_06_21052021/main/fisheye/public/json/FishEyeData.json')
@@ -18,12 +19,12 @@ const Photographe = () =>{
         setDataPhotographers(res.data)
         setLoading(false);
       });
-
+      
   }, []);
-
-
+  
   if (isLoading) {
     return <div className="App">Loading...</div>;
+
   }
 
   return (
@@ -44,7 +45,7 @@ const Photographe = () =>{
             }
           </section>
           <section className="photographers_media">
-            <PhotographeMedia id={id}  media={dataPhotographers.media} photographers={dataPhotographers.photographers} />
+            <PhotographeMedia id={id}  key={dataPhotographers.media.id} media={dataPhotographers.media} photographers={dataPhotographers.photographers} />
           </section>
         </div>
       </main>

@@ -11,7 +11,7 @@ const Photographers = () => {
     filterList, 
   } = useContext(FilterContext)
 
-    
+  // Récupérer la data
   useEffect(() => {
       axios
       .get('https://raw.githubusercontent.com/MouniaFT/MouniaFattouh_06_21052021/main/fisheye/public/json/FishEyeData.json')
@@ -25,7 +25,6 @@ const Photographers = () => {
         <h1 className="photographers_title">Nos photographes</h1>
         <ul className="photographers_list">
           {
-            
             dataPhotographers
             .filter((photographe) => {
               if (filterList.length <= 0) {

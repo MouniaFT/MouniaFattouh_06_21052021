@@ -3,10 +3,12 @@ import Modal from 'react-modal';
 import { FilterContext } from '../contexts/filterContext';
 import {useContext} from "react";
 import Formulaire from "./Formulaire";
+import { useHistory } from 'react-router-dom';
 
 Modal.setAppElement('#root')
 
 const PhotographeInfos = (infos) => {
+    const history = useHistory()
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const {
       filterList, 
@@ -40,7 +42,7 @@ const PhotographeInfos = (infos) => {
             {
               infos.photographe.tags
               .map((tag) => (
-                  <li className="tag-item">
+                  <li className="tag-item" onClick={() => {history.push('/')}}>
                     <button className={'tag-btn ' + (filterList.includes(tag) ? 'active' : ' ')}  onClick={clickBtn} value={tag}>#{tag}</button>
                   </li>
               ))
@@ -52,7 +54,7 @@ const PhotographeInfos = (infos) => {
       <button onClick={() => setModalIsOpen(true)} className="btn btn-contact">Contactez-moi</button>
       <Modal isOpen={modalIsOpen} className="modal">
           {/* Fermer la modal */}
-          <button onClick={() => setModalIsOpen(false)} className="modal-btn-close" title="fermer">
+          <button onClick={() => setModalIsOpen(false)} className="modal-btn-close" title="Close Contact">
                   <img src="../images/close.svg" alt=""/>
           </button>
           <Formulaire name={infos.photographe.name}/>

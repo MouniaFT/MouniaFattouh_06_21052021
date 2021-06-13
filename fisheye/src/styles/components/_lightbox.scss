@@ -1,0 +1,94 @@
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background-color: $color-grey05;
+
+    .slider-container {
+        padding: 4rem;
+        position: relative;
+        @include desktops {
+            padding: 4rem 9.3rem;
+            max-height: 100%;
+            display: flex;
+        }
+
+        .slider {
+            padding: 0 1rem;
+            @include desktops {
+                padding: 0 3.4rem;
+                max-height: 100%;
+                max-width: 100%;
+            }
+
+            .slider-image,
+            .slider-video {
+                width: 100%;
+                border-radius: 0.5rem;
+                @include desktops {
+                    width: auto;
+                    max-height: 100%;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }   
+
+            .slider-title {
+                color: $color-primary;
+                margin-top: 0.7rem;
+                @include desktops {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+
+        .btn-close {
+            width: 1.2rem;
+            border: 0;
+            color: $color-primary;
+            padding: 0;
+            background: none;
+            position: absolute;
+            top: 5rem;
+            right: 2.5rem;
+           
+            img {
+                width: 100%;
+            }
+            @include desktops {
+                width: 4.2rem;
+            }
+        }
+
+        .slider-chevron {
+            width: 1.4rem;
+            padding: 0;
+            background: none;
+            border: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            img {
+                width: 100%;
+            }
+            @include desktops {
+                width: 4.8rem;
+            }
+        }
+
+        .chevron-left {
+            left: 2.5rem;
+        }
+
+        .chevron-right {
+            right: 2.5rem;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    }
+}

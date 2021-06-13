@@ -18,6 +18,18 @@
 
             .media_filtre_btn {
                 border-radius: 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                &::after {
+                    content: '';
+                    width: 16px;
+                    height: 10px;
+                    background: url('../../assets/images/chevron-bottom.svg') no-repeat center / contain;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
            
             }
             

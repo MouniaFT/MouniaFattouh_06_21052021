@@ -16,14 +16,14 @@ const Cardphotographe = (props) => {
 
         // Ajouter le filtre si la valeur n'est pas presente dans la liste
         // ex: ["portrait", "travel"] 
-         if (!filterList.includes(value)) {
+        if (!filterList.includes(value)) {
              setFilterList([...filterList, value])
              e.target.classList.add('active')
         // Retirer le filtre si la valeur est presente dans la liste
-         } else {
+        } else {
              setFilterList(filterList.filter((filter) => filter !== value ))
              e.target.classList.remove('active')
-         }
+        }
     };
 
     return(
@@ -37,20 +37,17 @@ const Cardphotographe = (props) => {
                 <p className="tagline">{photographe.tagline}</p>
                 <p className="price">{photographe.price}€/jour</p>
                 <ul className="list-tags"> 
-                    {
-                        photographe.tags
-                        .map((tag) => (
-                            <li className="tag-item">
-                                <button className={'tag-btn ' + (filterList.includes(tag) ? 'active' : ' ')}  onClick={clickBtn} value={tag}>#{tag}</button>
-                            </li>
-                        ))
+                    {photographe.tags
+                            .map((tag) => (
+                                <li className="tag-item">
+                                    <button className={'tag-btn ' + (filterList.includes(tag) ? 'active' : ' ')}  onClick={clickBtn} value={tag}>#{tag}</button>
+                                </li>
+                            ))
                     }
                 </ul>
             </div>
         </li>
-        
     )
-    
 }
 
 export default Cardphotographe;

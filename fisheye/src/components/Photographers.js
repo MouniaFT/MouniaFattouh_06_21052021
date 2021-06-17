@@ -24,21 +24,19 @@ const Photographers = () => {
       <div className="container">
         <h1 className="photographers_title">Nos photographes</h1>
         <ul className="photographers_list">
-          {
-            dataPhotographers
-            .filter((photographe) => {
-              if (filterList.length <= 0) {
-                return true
-              }
-              if (photographe.tags.some(tag=> filterList.includes(tag))) {
-                return true
-              }
-              return false
-            })
-            .map((photographe) => (
-              <Cardphotographe photographe={photographe} key={photographe.id}/>
-
-            ))
+          {dataPhotographers
+                  .filter((photographe) => {
+                      if (filterList.length <= 0) {
+                        return true
+                      }
+                      if (photographe.tags.some(tag=> filterList.includes(tag))) {
+                        return true
+                      }
+                      return false
+                  })
+                  .map((photographe) => (
+                    <Cardphotographe photographe={photographe} key={photographe.id}/>
+                  ))
           }
         </ul>
       </div> 

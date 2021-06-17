@@ -24,11 +24,10 @@ const Photographe = () =>{
   
   if (isLoading) {
     return <div className="App">Loading...</div>;
-
   }
 
   return (
-    <div>
+    <>
       <header className="header">
         <div className="container">
           <Logo />
@@ -38,10 +37,10 @@ const Photographe = () =>{
         <div className="container">
           <section className="photographers_infos">
             {dataPhotographers.photographers
-                .filter((photographe) => photographe.id == id )
-                .map((photographe) => (
-                  <PhotographeInfos key={photographe.id} photographe={photographe} medias={dataPhotographers.media.filter((media) => media.photographerId == id)} />
-                ))
+                  .filter((photographe) => photographe.id === parseInt(id) )
+                  .map((photographe) => (
+                    <PhotographeInfos key={photographe.id} photographe={photographe} medias={dataPhotographers.media.filter((media) => media.photographerId === parseInt(id))} />
+                  ))
             }
           </section>
           <section className="photographers_media">
@@ -49,7 +48,7 @@ const Photographe = () =>{
           </section>
         </div>
       </main>
-    </div>
+    </>
   );
 }
 

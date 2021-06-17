@@ -27,15 +27,14 @@ const MediaCard = ({mediaIndex, media, setMediaDisplayed, photographers}) => {
                     return media.image ?
                     <img onClick={() => setMediaDisplayed({id:media.id , index:mediaIndex})} src={`../images/${photographe.name.replace(/\s+/g, '')}/${media.image}`} alt=""/>
                     :
-                    <img onClick={() => setMediaDisplayed({id:media.id , index:mediaIndex})} 
-                    src="../images/video-miniature.jpeg" alt=""></img>
+                    <img onClick={() => setMediaDisplayed({id:media.id , index:mediaIndex})} src="../images/video-miniature.jpeg" alt=""></img>
                     }
                 )
             }
             <div className="media-body">
                 <div className="title">{media.title}</div>
                 <span className="number">{like}</span>
-                <img onClick={incrementLike} className="likes"  src="../images/likes.svg" alt="likes"/>
+                <img onClick={incrementLike} className="likes" src="../images/likes.svg" alt="likes"/>
             </div>
         </li> 
     )

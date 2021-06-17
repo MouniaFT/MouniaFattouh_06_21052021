@@ -87,7 +87,7 @@ const PhotographeMedia = (props) => {
           {
             MediaDisplayed &&
             <div className="lightbox">
-                <ul className="slider-container">
+                <div className="slider-container">
                   <LightBox 
                     media={mediasPhotographe
                         .find((media) => media.id === MediaDisplayed.id)
@@ -117,11 +117,9 @@ const PhotographeMedia = (props) => {
                           mediasPhotographe.length -1
                         })}
                   /> 
-                </ul>
-          </div>
-         }
-        
-
+                </div>
+            </div>
+          }
       </div>
       
     );

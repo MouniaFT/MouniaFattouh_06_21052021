@@ -3,17 +3,21 @@ import Modal from 'react-modal';
 import { FilterContext } from '../contexts/filterContext';
 import {useContext} from "react";
 import Formulaire from "./Formulaire";
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
+import { CalculationContext } from '../contexts/calculationContext';
 
 Modal.setAppElement('#root')
 
 const PhotographeInfos = (infos) => {
+    const {id} = useParams();
     const history = useHistory()
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const {
       filterList, 
       setFilterList,
     } = useContext(FilterContext)
+    // const [totalLikes, setTotalLikes] = useState(infos.medias.reduce((prev, cur) => prev + cur.likes, 0 ));
+
 
     // filtrer les photographes par tag au click sur le tag
     const clickBtn = (e) => {
@@ -30,6 +34,19 @@ const PhotographeInfos = (infos) => {
           e.target.classList.remove('active')
       }
     };
+
+    const {
+      maValeur, 
+      setMaValeur
+    } = useContext(CalculationContext)
+    
+    let numberShotsBeforeUpdate = infos.medias.reduce((prev, cur) => prev + cur.likes, 0);
+    // const test = () => {
+    //   setNumberOfShots((numberShotsBeforeUpdate) => numberShotsBeforeUpdate + 1)
+    // }
+    
+    console.log("test", numberShotsBeforeUpdate);
+    console.log("after",maValeur + numberShotsBeforeUpdate)
 
   return (
     <div className="card-photographe">
@@ -48,6 +65,10 @@ const PhotographeInfos = (infos) => {
               ))
             }
         </ul>
+      </div>
+      <div className="card-photographe-infos">
+        <span className="infos-likes">{maValeur + numberShotsBeforeUpdate}</span>
+        <span className="infos-price">{infos.photographe.price}€ / jour</span>
       </div>
 
       {/* Ouvrir la modal */}

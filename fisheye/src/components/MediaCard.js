@@ -1,18 +1,24 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useParams } from "react-router";
+import { CalculationContext } from "../contexts/calculationContext";
 
 const MediaCard = ({mediaIndex, media, setMediaDisplayed, photographers}) => {
     const [like, setLike] = useState(media.likes);
     const {id} = useParams();
+    const {
+        maValeur, 
+        setMaValeur
+      } = useContext(CalculationContext)
     
     
     // Incrementer au click sur l'icone coeur
     const incrementLike = () => {
         if (like === media.likes) {
             setLike(like + 1);
+            setMaValeur(maValeur + 1);
         }
     }
-    
+
     return (
         <li className="media">
             {photographers

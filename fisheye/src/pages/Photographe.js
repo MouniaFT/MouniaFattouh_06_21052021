@@ -40,7 +40,7 @@ const Photographe = () =>{
             {dataPhotographers.photographers
                 .filter((photographe) => photographe.id == id )
                 .map((photographe) => (
-                  <PhotographeInfos key={photographe.id} photographe={photographe} />
+                  <PhotographeInfos key={photographe.id} photographe={photographe} medias={dataPhotographers.media.filter((media) => media.photographerId == id)} />
                 ))
             }
           </section>

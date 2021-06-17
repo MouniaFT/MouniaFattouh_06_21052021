@@ -40,10 +40,9 @@
             transform: translateX(50%);
         }
 
-        // .contact-btn:hover, .contact-btn:focus {
-        //     color: $color-black;
-        //     background-color: $color-secondary;
-        // }
+        .card-photographe-infos {
+            display: none;
+        }
 
     }
 
@@ -67,7 +66,38 @@
                 transform: translateX(-50%);
                 
             }
+            .card-photographe-infos {
+                display: block;
+                position: fixed;
+                bottom: -10px;
+                font-size: 2.4rem;
+                font-weight: 500;
+                background-color: $color-orange;
+                padding: 2rem 3rem;
+                border-radius: 0.5rem;
+                right: 50px;
+                // display: flex;
+                // align-items: center;
+                // justify-content: space-between;
 
+                .infos-likes {
+                    // display: flex;
+                    // align-items: center;
+                    &::after {
+                        content: '';
+                        width: 1.7rem;
+                        height: 1.8rem;
+                        display: inline-block;
+                        background: url("../../assets/images/likes-black.svg") no-repeat center/contain;
+                        margin-left: 0.7rem;
+                    }
+                }
+
+                .infos-price {
+                    margin-left: 6rem
+
+                }   
+            }
             
 
         }

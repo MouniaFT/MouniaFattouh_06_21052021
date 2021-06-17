@@ -21,7 +21,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                
+
                 &::after {
                     content: '';
                     width: 16px;
@@ -38,11 +38,30 @@
                 background-color: $color-primary;
                 border-radius: 0.5rem;
                 position: absolute;
+                
                 li {
                     button {
                         border-bottom: 1px solid $color-white;
-                        padding-left: 1rem;
                         min-width: 15rem;
+                        padding: 2rem 1rem;
+                    }
+
+                    &:first-child {
+                        button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            &::after {
+                                content: '';
+                                width: 16px;
+                                height: 10px;
+                                background: url('../../assets/images/chevron-top.svg') no-repeat center / contain;
+                                display: inline-block;
+                                vertical-align: middle;
+
+                            }
+                        } 
                     }
                     
                     &:last-child button {

@@ -21,20 +21,26 @@ const MediaCard = ({mediaIndex, media, setMediaDisplayed, photographers}) => {
 
     return (
         <li className="media">
-            {photographers
-                .filter((photographe) => photographe.id === parseInt(id) )
-                .map((photographe) => {
-                    return media.image ?
-                    <img onClick={() => setMediaDisplayed({id:media.id , index:mediaIndex})} src={`../images/${photographe.name.replace(/\s+/g, '')}/${media.image}`} alt=""/>
-                    :
-                    <img onClick={() => setMediaDisplayed({id:media.id , index:mediaIndex})} src="../images/video-miniature.jpeg" alt=""></img>
-                    }
-                )
-            }
+                {photographers
+                    .filter((photographe) => photographe.id === parseInt(id) )
+                    .map((photographe) => {
+                        return media.image ?
+                        <button className="media-image" onClick={() => setMediaDisplayed({id:media.id , index:mediaIndex})}>
+                            <img src={`../images/${photographe.name.replace(/\s+/g, '')}/${media.image}`} alt={media.description + ", closeup view"}/>
+                        </button>
+                        :
+                        <button className="media-image" onClick={() => setMediaDisplayed({id:media.id , index:mediaIndex})}>
+                            <img src={`../images/${photographe.name.replace(/\s+/g, '')}/video-miniature.jpeg`} alt="imag-miniature-delavideo, closeup view"/>
+                        </button>
+                        }
+                    )
+                }
             <div className="media-body">
                 <div className="title">{media.title}</div>
                 <span className="number">{like}</span>
-                <img onClick={incrementLike} className="likes" src="../images/likes.svg" alt="likes"/>
+                <button className="likes" onClick={incrementLike}>
+                    <img src="../images/likes.svg" alt="likes"/>
+                </button>
             </div>
         </li> 
     )

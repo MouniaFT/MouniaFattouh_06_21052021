@@ -61,7 +61,7 @@
             .btn-contact {
                 position: absolute;
                 top: 218px;
-                left: 500px;
+                left: 600px;
                 bottom: auto;
                 transform: translateX(-50%);
                 
@@ -76,13 +76,10 @@
                 padding: 2rem 3rem;
                 border-radius: 0.5rem;
                 right: 50px;
-                // display: flex;
-                // align-items: center;
-                // justify-content: space-between;
+                
 
                 .infos-likes {
-                    // display: flex;
-                    // align-items: center;
+                    
                     &::after {
                         content: '';
                         width: 1.7rem;

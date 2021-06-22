@@ -1,11 +1,14 @@
 import { useState } from "react";
 import MediaCard from "./MediaCard";
 import LightBox from "./Lightbox";
+import FocusTrap from 'focus-trap-react';
+
 
 
 const PhotographeMedia = (props) => {
       const [isMenuOpen, setIsMenuOpen] = useState(true);
       const [MediaDisplayed, setMediaDisplayed] = useState(undefined);
+    
       
       const type = {
         likes: "Popularité",
@@ -57,9 +60,9 @@ const PhotographeMedia = (props) => {
             {
               // Ouvrir ou fermer la liste du menu
               isMenuOpen ? 
-              <button className="media_filtre_btn" onClick={() => setIsMenuOpen(false)}>{type[sortedProperty]} </button>
+              <button id="btn-listbox" className="media_filtre_btn" aria-haspopup="listbox" aria-expanded="false" aria-controls="listbox"onClick={() => setIsMenuOpen(false)}>{type[sortedProperty]} </button>
               :
-              <ul className="media_filtre_list" >
+              <ul id="listbox" role="listbox" aria-labelledby="btn-listbox" aria-expanded="true" className="media_filtre_list"  >
                 <li><button onClick={() => {
                   setSortedProperty('likes');
                   setIsMenuOpen(true);
@@ -86,8 +89,9 @@ const PhotographeMedia = (props) => {
         </ul>
           {
             MediaDisplayed &&
-            <div className="lightbox">
-                <div className="slider-container">
+            <FocusTrap>
+              <div className="lightbox">
+                <div className="slider-container" aria-label="image closeup view">
                   <LightBox 
                     media={mediasPhotographe
                         .find((media) => media.id === MediaDisplayed.id)
@@ -118,10 +122,10 @@ const PhotographeMedia = (props) => {
                         })}
                   /> 
                 </div>
-            </div>
+              </div>
+            </FocusTrap>
           }
       </div>
-      
     );
 }
 export default PhotographeMedia;

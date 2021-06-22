@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/%7BMouniaFattouh_06_21052021%7D/static/css/main.83fe3e60.chunk.css",
+    "main.js": "/%7BMouniaFattouh_06_21052021%7D/static/js/main.243587ce.chunk.js",
+    "main.js.map": "/%7BMouniaFattouh_06_21052021%7D/static/js/main.243587ce.chunk.js.map",
+    "runtime-main.js": "/%7BMouniaFattouh_06_21052021%7D/static/js/runtime-main.399dfd99.js",
+    "runtime-main.js.map": "/%7BMouniaFattouh_06_21052021%7D/static/js/runtime-main.399dfd99.js.map",
+    "static/js/2.79cf5709.chunk.js": "/%7BMouniaFattouh_06_21052021%7D/static/js/2.79cf5709.chunk.js",
+    "static/js/2.79cf5709.chunk.js.map": "/%7BMouniaFattouh_06_21052021%7D/static/js/2.79cf5709.chunk.js.map",
+    "index.html": "/%7BMouniaFattouh_06_21052021%7D/index.html",
+    "static/css/main.83fe3e60.chunk.css.map": "/%7BMouniaFattouh_06_21052021%7D/static/css/main.83fe3e60.chunk.css.map",
+    "static/js/2.79cf5709.chunk.js.LICENSE.txt": "/%7BMouniaFattouh_06_21052021%7D/static/js/2.79cf5709.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/%7BMouniaFattouh_06_21052021%7D/static/media/likes-black.f1c474dc.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.399dfd99.js",
+    "static/js/2.79cf5709.chunk.js",
+    "static/css/main.83fe3e60.chunk.css",
+    "static/js/main.243587ce.chunk.js"
+  ]
+}

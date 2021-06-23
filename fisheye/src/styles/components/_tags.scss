@@ -24,4 +24,10 @@
             }
         }
     }
+
+    @include desktops {
+        .tag-item {
+            margin-bottom: 0;
+        }
+    }
 }

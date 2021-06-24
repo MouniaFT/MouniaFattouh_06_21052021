@@ -29,7 +29,7 @@ const Cardphotographe = (props) => {
     return(
         <li className="card-photographe">
             <Link to={`/photographe/${photographe.id}`} className="card-photographe-header">
-                <img src={`../images/Photographers/${photographe.portrait}`} alt=""/>
+                <img src={`./images/Photographers/${photographe.portrait}`} alt=""/>
                 <h2 className="name">{photographe.name}</h2>
             </Link>
             <div className="card-photographe-body">

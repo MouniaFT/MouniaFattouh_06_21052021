@@ -43,7 +43,7 @@ const PhotographeInfos = (infos) => {
     
   return (
     <div className="card-photographe">
-      <img src={`../images/Photographers/${infos.photographe.portrait}`} alt=""/>
+      <img src={`./images/Photographers/${infos.photographe.portrait}`} alt=""/>
       <div className="card-photographe-body">
         <h1 className="name">{infos.photographe.name}</h1>
         <p className="location">{infos.photographe.city}, {infos.photographe.country}</p>
@@ -68,7 +68,7 @@ const PhotographeInfos = (infos) => {
       <Modal isOpen={modalIsOpen} className="modal">
           {/* Fermer la modal */}
           <button onClick={() => setModalIsOpen(false)} className="modal-btn-close" title="Close Contact">
-                  <img src="../images/close.svg" alt=""/>
+                  <img src="./images/close.svg" alt=""/>
           </button>
           <Formulaire name={infos.photographe.name}/>
       </Modal>

@@ -79,6 +79,10 @@
                 
 
                 .infos-likes {
+                    .number {
+                        min-width: 46px;
+                        display: inline-block;
+                    }
                     
                     &::after {
                         content: '';

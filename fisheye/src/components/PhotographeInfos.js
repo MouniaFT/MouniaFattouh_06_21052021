@@ -59,7 +59,7 @@ const PhotographeInfos = (infos) => {
         </ul>
       </div>
       <div className="card-photographe-infos">
-        <span className="infos-likes">{maValeur + numberShotsBeforeUpdate}</span>
+        <span className="infos-likes"><span className="number">{maValeur + numberShotsBeforeUpdate}</span></span>
         <span className="infos-price">{infos.photographe.price}€ / jour</span>
       </div>
 

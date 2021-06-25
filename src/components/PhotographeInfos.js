@@ -68,7 +68,7 @@ const PhotographeInfos = (infos) => {
       <Modal isOpen={modalIsOpen} className="modal">
           {/* Fermer la modal */}
           <button onClick={() => setModalIsOpen(false)} className="modal-btn-close" title="Close Contact">
-                  <img src="./images/close.svg" alt=""/>
+                  <img src={require("../images/close.svg").default} alt=""/>
           </button>
           <Formulaire name={infos.photographe.name}/>
       </Modal>

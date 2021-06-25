@@ -1,10 +1,10 @@
-import {HashRouter, Switch, Route} from "react-router-dom";
+import {HashRouter, BrowserRouter, Switch, Route} from "react-router-dom";
 import Home from "./home";
 import Photographe from "./photographe";
     
 const Pages=() => {    
     return(
-        <HashRouter>
+        <BrowserRouter>
             <Switch>
                 <Route exact path="/" component={Home}>
                     <Home />
@@ -13,7 +13,7 @@ const Pages=() => {
                     <Photographe />
                 </Route>
             </Switch>
-        </HashRouter> 
+        </BrowserRouter> 
     );
 };
 export default Pages;

@@ -43,7 +43,7 @@ const PhotographeInfos = (infos) => {
     
   return (
     <div className="card-photographe">
-      <img src={`./images/Photographers/${infos.photographe.portrait}`} alt=""/>
+      <img src={require(`../images/Photographers/${infos.photographe.portrait}`).default} alt=""/>
       <div className="card-photographe-body">
         <h1 className="name">{infos.photographe.name}</h1>
         <p className="location">{infos.photographe.city}, {infos.photographe.country}</p>

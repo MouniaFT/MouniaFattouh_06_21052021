@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { useParams } from "react-router";
 import { CalculationContext } from "../contexts/calculationContext";
 
+const images = require.context('../images', true);
+
 const MediaCard = ({mediaIndex, media, setMediaDisplayed, photographers}) => {
     const [like, setLike] = useState(media.likes);
     const {id} = useParams();
@@ -19,6 +21,7 @@ const MediaCard = ({mediaIndex, media, setMediaDisplayed, photographers}) => {
         }
     }
 
+    // console.log(images(`../images/${photographers[0].name.replace(/\s+/g, '')}/${media.image}`))
     return (
         <li className="media">
                 {photographers
@@ -26,11 +29,11 @@ const MediaCard = ({mediaIndex, media, setMediaDisplayed, photographers}) => {
                     .map((photographe) => {
                         return media.image ?
                         <button className="media-image" onClick={() => setMediaDisplayed({id:media.id , index:mediaIndex})}>
-                            <img src={`./images/${photographe.name.replace(/\s+/g, '')}/${media.image}`} alt={media.description + ", closeup view"}/>
+                            <img src={images(`./${photographe.name.replace(/\s+/g, '')}/${media.image}`).default} alt={media.description + ", closeup view"}/>
                         </button>
                         :
                         <button className="media-image" onClick={() => setMediaDisplayed({id:media.id , index:mediaIndex})}>
-                            <img src={`./images/${photographe.name.replace(/\s+/g, '')}/video-miniature.jpeg`} alt="imag-miniature-delavideo, closeup view"/>
+                            <img src={images(`./${photographe.name.replace(/\s+/g, '')}/video-miniature.jpeg`).default} alt="imag-miniature-delavideo, closeup view"/>
                         </button>
                         }
                     )
@@ -39,7 +42,7 @@ const MediaCard = ({mediaIndex, media, setMediaDisplayed, photographers}) => {
                 <div className="title">{media.title}</div>
                 <span className="number">{like}</span>
                 <button className="likes" onClick={incrementLike}>
-                    <img src="./images/likes.svg" alt="likes"/>
+                    <img src={images("./likes.svg").default} alt="likes"/>
                 </button>
             </div>
         </li> 

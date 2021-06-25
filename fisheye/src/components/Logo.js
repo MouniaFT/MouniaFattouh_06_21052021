@@ -7,7 +7,7 @@ const Logo = () => {
       return (
         // onClick : return to home
         <a href="./" onClick={() => {history.push('/')}} className="header_logo" title="fisheye - retour à l'accueil">
-          <img className="logo" src="./images/logo.svg" alt="Fisheye Home page"/>
+          <img className="logo" src={require("../images/logo.svg").default} alt="Fisheye Home page"/>
         </a>
       );
 }

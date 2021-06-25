@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/MouniaFattouh_06_21052021/static/css/main.ea7b58a5.chunk.css",
-    "main.js": "/MouniaFattouh_06_21052021/static/js/main.65ae8ee4.chunk.js",
-    "main.js.map": "/MouniaFattouh_06_21052021/static/js/main.65ae8ee4.chunk.js.map",
+    "main.css": "/MouniaFattouh_06_21052021/static/css/main.f0fcfbbd.chunk.css",
+    "main.js": "/MouniaFattouh_06_21052021/static/js/main.f7526b75.chunk.js",
+    "main.js.map": "/MouniaFattouh_06_21052021/static/js/main.f7526b75.chunk.js.map",
     "runtime-main.js": "/MouniaFattouh_06_21052021/static/js/runtime-main.9e47f77e.js",
     "runtime-main.js.map": "/MouniaFattouh_06_21052021/static/js/runtime-main.9e47f77e.js.map",
-    "static/js/2.8dfed46a.chunk.js": "/MouniaFattouh_06_21052021/static/js/2.8dfed46a.chunk.js",
-    "static/js/2.8dfed46a.chunk.js.map": "/MouniaFattouh_06_21052021/static/js/2.8dfed46a.chunk.js.map",
+    "static/js/2.33198a1d.chunk.js": "/MouniaFattouh_06_21052021/static/js/2.33198a1d.chunk.js",
+    "static/js/2.33198a1d.chunk.js.map": "/MouniaFattouh_06_21052021/static/js/2.33198a1d.chunk.js.map",
     "index.html": "/MouniaFattouh_06_21052021/index.html",
-    "static/css/main.ea7b58a5.chunk.css.map": "/MouniaFattouh_06_21052021/static/css/main.ea7b58a5.chunk.css.map",
-    "static/js/2.8dfed46a.chunk.js.LICENSE.txt": "/MouniaFattouh_06_21052021/static/js/2.8dfed46a.chunk.js.LICENSE.txt",
+    "static/css/main.f0fcfbbd.chunk.css.map": "/MouniaFattouh_06_21052021/static/css/main.f0fcfbbd.chunk.css.map",
+    "static/js/2.33198a1d.chunk.js.LICENSE.txt": "/MouniaFattouh_06_21052021/static/js/2.33198a1d.chunk.js.LICENSE.txt",
     "static/media/Animals_Majesty.jpg": "/MouniaFattouh_06_21052021/static/media/Animals_Majesty.003c7c5c.jpg",
     "static/media/Animals_Puppiness.mp4": "/MouniaFattouh_06_21052021/static/media/Animals_Puppiness.5fd5f0db.mp4",
     "static/media/Animals_Rainbow.jpg": "/MouniaFattouh_06_21052021/static/media/Animals_Rainbow.156574c3.jpg",
@@ -79,7 +79,6 @@
     "static/media/index.scss": "/MouniaFattouh_06_21052021/static/media/likes-black.f1c474dc.svg",
     "static/media/chevron-left.svg": "/MouniaFattouh_06_21052021/static/media/chevron-left.65105c0e.svg",
     "static/media/chevron-right.svg": "/MouniaFattouh_06_21052021/static/media/chevron-right.530afaae.svg",
-    "static/media/chevron-top.svg.svg": "/MouniaFattouh_06_21052021/static/media/chevron-top.svg.8d69ff39.svg",
     "static/media/close-lightbox.svg": "/MouniaFattouh_06_21052021/static/media/close-lightbox.8eb61d33.svg",
     "static/media/close.svg": "/MouniaFattouh_06_21052021/static/media/close.396366ef.svg",
     "static/media/likes.svg": "/MouniaFattouh_06_21052021/static/media/likes.45053227.svg",
@@ -89,8 +88,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.9e47f77e.js",
-    "static/js/2.8dfed46a.chunk.js",
-    "static/css/main.ea7b58a5.chunk.css",
-    "static/js/main.65ae8ee4.chunk.js"
+    "static/js/2.33198a1d.chunk.js",
+    "static/css/main.f0fcfbbd.chunk.css",
+    "static/js/main.f7526b75.chunk.js"
   ]
 }

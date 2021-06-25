@@ -4,7 +4,7 @@ import Photographe from "./photographe";
     
 const Pages=() => {    
     return(
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Switch>
                 <Route exact path="/" component={Home}>
                     <Home />

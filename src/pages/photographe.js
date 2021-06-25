@@ -14,7 +14,7 @@ const Photographe = () =>{
   // Récupérer la data
   useEffect(() => {
       axios
-      .get('https://raw.githubusercontent.com/MouniaFT/MouniaFattouh_06_21052021/main/fisheye/public/json/FishEyeData.json')
+      .get('https://raw.githubusercontent.com/MouniaFT/MouniaFattouh_06_21052021/main/public/json/FishEyeData.json')
       .then((res) => {
         setDataPhotographers(res.data)
         setLoading(false);

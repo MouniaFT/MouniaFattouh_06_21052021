@@ -1,5 +1,3 @@
-import { createRequire } from "module";
-
 
 const LightBox = (props) => {
     

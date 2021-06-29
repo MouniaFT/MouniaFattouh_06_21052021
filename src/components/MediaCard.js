@@ -21,7 +21,6 @@ const MediaCard = ({mediaIndex, media, setMediaDisplayed, photographers}) => {
         }
     }
 
-    // console.log(images(`../images/${photographers[0].name.replace(/\s+/g, '')}/${media.image}`))
     return (
         <li className="media">
                 {photographers
